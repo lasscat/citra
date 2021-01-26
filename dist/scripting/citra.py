@@ -32,7 +32,7 @@ class Citra:
             expected_type == reply_type and
             reply_data_size == len(raw_reply[4*4:])):
             return raw_reply[4*4:]
-        return None
+        pass
 
     def read_memory(self, read_address, read_size):
         """
@@ -55,7 +55,7 @@ class Citra:
                 read_size -= len(reply_data)
                 read_address += len(reply_data)
             else:
-                return None
+                pass
 
         return result
 
